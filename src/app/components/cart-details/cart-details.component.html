@@ -27,7 +27,7 @@
 
                                 <div class="row no-gutters">
                                     <div class="col">
-                                        <button (click)="incrementQuantity(tempCartItem)" class="btn btn-primary btn-sm">
+                                        <button (click)="incrementQuantity(tempCartItem)" class="btn btn-info">
                                             +
                                         </button>
                                     </div>
@@ -37,7 +37,7 @@
 
                                     </div>
                                     <div class="col">
-                                        <button (click)="decrementQuantity(tempCartItem)"class="btn btn-primary btn-sm" >
+                                        <button (click)="decrementQuantity(tempCartItem)"class= "btn btn-info" >
                                             -
                                         </button>
                                     </div>
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
 
-                            <button (click)="remove(tempCartItem)" class="btn btn-primary btn-sm">Remove</button>
+                            <button (click)="remove(tempCartItem)" class="btn btn-info">Remove</button>
 
                             <p class="mt-2">Subtotal : {{ tempCartItem.quantity * tempCartItem.unitPrice |
                                 currency:'INR'}}</p>
@@ -60,7 +60,7 @@
                         <td style="font-weight : bold">
                             <p>Total Quantity: {{ totalQuantity }}</p>
                             <p>Total Price:{{ totalPrice | currency: 'INR'}}</p>
-                            <a routerLink="/checkout" class="btn btn-primary btn-sm">Checkout</a>
+                            <a routerLink="/checkout" class="btn btn-info">Checkout</a>
                         </td>
                     </tr>
                 </table>
@@ -72,5 +72,3 @@
         </div>
     </div>
 </div>
-
-<p>cart-details works!</p>
