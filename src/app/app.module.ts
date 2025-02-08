@@ -29,6 +29,7 @@ import {
 import { OktaAuth} from '@okta/okta-auth-js';
 
 import myAppConfig from './config/my-app-config';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const oktaConfig = myAppConfig.oidc;
 
@@ -72,6 +73,7 @@ const routes: Routes=[
   ],
   providers: [ProductService,
     provideHttpClient(), {provide: OKTA_CONFIG, useValue:{oktaAuth}},
+    {provide :LocationStrategy , useClass : HashLocationStrategy},
   ],
   bootstrap: [AppComponent]
 })
