@@ -26,6 +26,7 @@
             "outputPath": "dist/angular-ecommerce",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/",
             "polyfills": [
               "zone.js",
               "@angular/localize/init"
